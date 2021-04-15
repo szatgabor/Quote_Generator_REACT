@@ -8,9 +8,9 @@ function QuoteContainer(props) {
     return (
         <>
         <div className="quote-container">
-            <QuoteText quoteText={props.quoteText}/>
+            <QuoteText quoteText={props.quoteText} newClass={props.newClass}/>
             <QuoteAuthor quoteAuthor={props.quoteAuthor}/>
-            <Buttons onClick={props.onClick}> New Quote </Buttons>
+            <Buttons onClick={props.onClick} quoteText={props.quoteText} quoteAuthor={props.quoteAuthor}> New Quote </Buttons>
         </div>
         </>
     )

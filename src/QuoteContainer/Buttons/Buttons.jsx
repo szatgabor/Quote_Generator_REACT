@@ -3,9 +3,14 @@ import './Buttons.css'
 
 const Buttons = (props) =>  {
     const {onClick, children} = props;
+    const tweetQuote = ()=>{
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${props.quoteText.quote} - ${props.quoteAuthor.author}`;
+        window.open(twitterUrl, '_blank');
+        console.log(props)
+    }
     return (
         <div className="button-container">
-            <button className="twitter-button" title="Tweet this"><i className="fab fa-twitter"></i></button>
+            <button onClick={tweetQuote} className="twitter-button" title="Tweet this"><i className="fab fa-twitter"></i></button>
             <button className="new-quote" onClick={onClick}>{children}</button>
         </div>
     )

@@ -5,7 +5,7 @@ function QuoteText(props) {
     return (
         <div className="quote-text">
             <i class="fas fa-quote-left"></i>
-            <span> {props.quoteText.quote}</span>
+            <span className={props.newClass}> {props.quoteText.quote}</span>
         </div>
     )
 }
