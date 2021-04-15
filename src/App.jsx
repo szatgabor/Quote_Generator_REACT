@@ -29,7 +29,7 @@ function App() {
             }else{
                 setQuoteClass("");
             }
-            setLoader(false);
+        setLoader(false);
         } catch(error){
             quoteAPI();
     
