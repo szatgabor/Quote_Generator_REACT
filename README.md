@@ -2,6 +2,8 @@
 
 Quote generator made by Javascript
 
+Live Demo: https://szatgabor.github.io/Quote_Generator_REACT/
+
 #### layout
 
 - The code made with REACT.js
