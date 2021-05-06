@@ -18,6 +18,7 @@ function App() {
         try{
             const response = await fetch(proxyUrl + apiUrl);
             const data = await response.json();
+            console.log(data)
             setQuote(data.quoteText);
             if(data.quoteAuthor === ''){
                 setAuthor('Unknown');
@@ -31,14 +32,15 @@ function App() {
             }
         setLoader(false);
         } catch(error){
-            quoteAPI();
-    
+            //quoteAPI();
+            console.log(error)
         }
     }
 
     //Button function to call newQuote
     const newQuoteClick = (e)=> {
         e.preventDefault();
+        console.log('neq quote clicked')
         return quoteAPI();
     } 
 
@@ -48,7 +50,7 @@ function App() {
    }, []);
     return (
          <>
-        {loader ? (<Loader />) : (<QuoteContainer newClass={quoteClass} quoteText={{quote}} quoteAuthor={{author}} onClick={newQuoteClick}/>)}
+        {loader ? (<Loader />) : (<QuoteContainer newClass={quoteClass} quoteText={quote} quoteAuthor={author} onClick={newQuoteClick}/>)}
         </> 
     )
 }

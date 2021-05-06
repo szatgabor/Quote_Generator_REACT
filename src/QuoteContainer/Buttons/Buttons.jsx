@@ -4,7 +4,7 @@ import './Buttons.css'
 const Buttons = (props) =>  {
     const {onClick, children} = props;
     const tweetQuote = ()=>{
-        const twitterUrl = `https://twitter.com/intent/tweet?text=${props.quoteText.quote} - ${props.quoteAuthor.author}`;
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${props.quoteText} - ${props.quoteAuthor}`;
         window.open(twitterUrl, '_blank');
         console.log(props)
     }
