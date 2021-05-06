@@ -4,7 +4,7 @@ Quote generator made by Javascript
 
 #### layout
 
-The code made with REACT.js
+- The code made with REACT.js
 
 #### Icons
 
